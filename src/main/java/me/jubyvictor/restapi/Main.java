@@ -130,23 +130,9 @@ public class Main {
     HTTPRequestValidationHandler validationHandler() {
         return HTTPRequestValidationHandler
                 .create()
-
                 .addHeaderParam("Content-Type", ParameterType.GENERIC_STRING, true)
                 .addHeaderParam("Accept", ParameterType.GENERIC_STRING, true)
-                .addHeaderParam("Authorization", ParameterType.GENERIC_STRING, true)
-                .addHeaderParam("intuit_requestid", ParameterType.GENERIC_STRING, true)
-                .addHeaderParam("intuit_tid", ParameterType.GENERIC_STRING, true)
-                .addHeaderParam("intuit_offeringId", ParameterType.GENERIC_STRING, false)
-                .addHeaderParam("intuit_assetId", ParameterType.GENERIC_STRING, false)
-                .addHeaderParam("intuit_assetAlias", ParameterType.GENERIC_STRING, false)
-                .addHeaderParam("intuit_locale", ParameterType.GENERIC_STRING, false)
-                .addHeaderParam("intuit_country", ParameterType.GENERIC_STRING, false)
-                .addHeaderParam("intuit_originatingip", ParameterType.GENERIC_STRING, false)
-                .addHeaderParam("intuit_app_name", ParameterType.GENERIC_STRING, false)
-                .addHeaderParam("intuit_clientId", ParameterType.GENERIC_STRING, false)
-
-
-                .addQueryParam("duplicateCheck", ParameterType.GENERIC_STRING, false);
+                .addHeaderParam("Authorization", ParameterType.GENERIC_STRING, true);
 
     }
 
@@ -154,7 +140,6 @@ public class Main {
     public static void main(String[] args) {
         LOG.info("Starting http API server!");
         Main self = new Main();
-
         self.start();
     }
 
