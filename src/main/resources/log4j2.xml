@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="DEBUG">
+    <Appenders>
+        <RollingFile name="RollingFileLogger" fileName="/tmp/vrtx-api.log"
+                     filePattern="logs/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log.gz">
+            <PatternLayout>
+                <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy />
+                <SizeBasedTriggeringPolicy size="128 MB"/>
+            </Policies>
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <!-- avoid duplicated logs with additivity=false -->
+        <Logger name="com.intuit" level="debug" additivity="false">
+            <AppenderRef ref="RollingFileLogger"/>
+        </Logger>
+        <Root level="error">
+            <AppenderRef ref="RollingFileLogger"/>
+        </Root>
+    </Loggers>
+</Configuration>
