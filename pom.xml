@@ -16,7 +16,7 @@
         <dp-rest-api-version>2019.10.30.793-RELEASE</dp-rest-api-version>
         <vertx.version>3.8.3</vertx.version>
         <junit.version>4.11</junit.version>
-        <log4j.version>2.12.1</log4j.version>
+        <log4j.version>2.13.3</log4j.version>
         <wavefront.micrometer-core.version>1.2.0</wavefront.micrometer-core.version>
         <wavefront.micrometer-registry-prometheus.version>1.2.0</wavefront.micrometer-registry-prometheus.version>
         
